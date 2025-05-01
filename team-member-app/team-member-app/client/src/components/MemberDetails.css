@@ -1,0 +1,179 @@
+.member-details-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-details-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+}
+
+.member-header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+}
+
+.member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: var(--card-shadow);
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-title {
+  margin-left: 2rem;
+}
+
+.member-title h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.member-title .role {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.member-info {
+  padding: 2rem;
+}
+
+.info-section {
+  margin-bottom: 2rem;
+}
+
+.info-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.email {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+.email .label {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.email a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.email a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.back-btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.back-btn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.loading-container,
+.error-container,
+.not-found-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error-message {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .member-details-container {
+    padding: 1rem;
+  }
+
+  .member-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .member-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .member-title {
+    margin-left: 0;
+  }
+
+  .member-title h1 {
+    font-size: 1.8rem;
+  }
+
+  .member-info {
+    padding: 1.5rem;
+  }
+
+  .email {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
